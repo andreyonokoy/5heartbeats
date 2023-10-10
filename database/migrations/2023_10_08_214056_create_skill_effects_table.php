@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('skills_conditions', function (Blueprint $table) {
+        Schema::create('skill_effects', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('condition');
+            $table->string('effect');
             $table->json('values');
             $table->foreignIdFor(\App\Models\Skills::class);
+            $table->timestamps();
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('skills_conditions');
+        Schema::dropIfExists('skill_effects');
     }
 };

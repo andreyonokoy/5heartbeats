@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\EducationController;
 
 
 
@@ -23,3 +24,6 @@ Route::get('/', function () {
 Route::get('/character/create/', [CharacterController::class, 'create']);
 
 
+/*Education group*/
+
+Route::get('/education/{lab}', [EducationController::class, 'index']);

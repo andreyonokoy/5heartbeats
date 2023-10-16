@@ -1,3 +1,10 @@
+<h1>How to install</h1>
+1. Install Latest Laravel.
+2. Copy files from the repo to the new Laravel folder.
+3. Run SQL file /database/dump/dump20231016.sql
+4. Start web server with the command - php artisan serve
+
+<h1>Labs</h1>
 <h2>Lab: Namespace</h2>
 1. Identify the namespaces used<br/>
    Answer: It uses namespaces starting /src/OrderApp/ folder in accordance with PSR-4 standard and they look like
@@ -25,3 +32,10 @@ Answer: didn't have enough time to make something useful.<br/>
 Created app/Http/Controllers/EducationController.php method labMagicMethods which has examples of each Magic Methods usage.
    <h2>Lab: Abstract Classes</h2>
    Created /app/Effects/AbstractEffect.php abstract class for Effect execution. Abstract method "apply" will contain all unique logic for concreate skill effect execution.
+   <h2>Lab: Interfaces</h2>
+Created Interface Damagable /app/Interfaces/Damageable.php to collect all objects which can be damaged by skills. Now only class Characters implements this interface, but in future different objects will be added.<br/>
+   <h2>Lab: Type Hinting</h2>
+   <h2>Lab: Build Custom Exception Class</h2>
+   Added 2 exception classes to manage the situation when skill has effect or condition without special class<br/>
+   In Laravel, as I can see, try and catch blocks are already added. We may execute http://127.0.0.1:8000/education/labexceptions/ which tries to execute wrong Skill Effect Class.<br/>
+<h2>Lab: Traits</h2>

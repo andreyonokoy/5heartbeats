@@ -21,11 +21,11 @@ class CharacterController extends Controller
 
 
         $skillData = [
-            'skillname'=>'Attack',
+            'skillname'=>'AttackException',
             'skillTree'=>'Fighting',
             'skillType'=>'Physical damage',
             'skillEffect'=>[
-                'effect' => 'BasicAttack',
+                'effect' => 'BasicAttackException',
                 'values' => json_encode(['DamageToTarget'=>'10'])
             ],
             'skillCondition'=>[

@@ -4,9 +4,10 @@ namespace App\Effects;
 
 class BasicAttack extends AbstractEffect
 {
-    protected string $logEntry = 'Executed skill Basic Attack';
     public function apply()
     {
-        //execute Skill effect logic
+        $damageAmount=$this->values['DamageToTarget'];
+        $this->setLogEntry('Successful attack makes '.$damageAmount.' dmg');
+        $this->target->descreaseHitPoints($damageAmount);
     }
 }

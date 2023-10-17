@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Effects;
+namespace App\Conditions;
 use App\Models\Characters;
 use App\Traits\CombatLog;
 
-abstract class AbstractEffect
+abstract class AbstractCondition
 {
     use CombatLog;
     private array $effectValues=[];
@@ -20,7 +20,5 @@ abstract class AbstractEffect
 
         $this->apply();
     }
-
-
 
 }

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Skills;
+use App\Service\ExecuteSkill;
+use App\Service\SkillsService;
 use Illuminate\Http\Request;
 use App\Education\MagicMethods;
+use App\Models\Characters;
 
 class EducationController extends Controller
 {
@@ -40,8 +44,24 @@ class EducationController extends Controller
         var_dump($magicMethods);
     }
 
-    public function labAbstractClasses(Request $request)
+    public function labInterfaces(Request $request)
     {
+        $superHero=Characters::find(1);
+        $goblin=Characters::find(2);
+        $skillAttack = SkillsService::get(1);
+        $executeSkill = new ExecuteSkill();
+        $executeSkill($skillAttack,$superHero,$goblin);
+
+    }
+
+    public function labExceptions(Request $request)
+    {
+        $superHero=Characters::find(1);
+        $goblin=Characters::find(2);
+        $skillAttack = SkillsService::get(3);
+        // dd($skillAttack->getConditions());
+        $executeSkill = new ExecuteSkill();
+        $executeSkill($skillAttack,$superHero,$goblin);
 
     }
 

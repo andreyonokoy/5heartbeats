@@ -41,13 +41,14 @@ In most of my classes, I hint types.
    Added 2 exception classes to manage the situation when skill has effect or condition without special class. In my plan each unique skill effect or condition should have class which should maintain it's logic.
 Same effect or condition class may work with different skills. It gives the possibility to build complex logic from same blocks.<br/>
    In Laravel, try and catch blocks are already added. We may execute http://127.0.0.1:8000/education/labexceptions/ which tries to execute wrong Skill Effect Class.<br/>
+Laravel stores logs with exceptions in /storage/logs folder<br/>
 <h2>Lab: Traits</h2>
-Added Trait /app/Traits/CombatLog.php<br/>>
+Added Trait /app/Traits/CombatLog.php<br/>
 We may execute http://127.0.0.1:8000/education/labInterfaces/ and see how my application works. In /app/Http/Controllers/EducationController.php I initialized some characters with Level and HitPoins and used Attack skill with conditions and effects. All actions are printed in combat log.<br/>
 Special CombatLog trait was added to Characters, Skills, SkillEffects and SkillConditions classes. It means that all such object may write some data for CombatLog.<br/>
-But basically, I wanna separate CombatLogs by Combat Model, because it should contain logs from concrete actions inside one combat. how I should set Combat object or Combant_id value in this trait?
+But basically, I want to separate CombatLogs by Combat Model, because it should contain logs from concrete actions inside one combat. how I should set Combat object or Combant_id value in this trait?
 
-<h2>Questions</h2>
+<h2>Additional questions/h2>
 1. Can you recommend a good Laravel online training?<br/>
 2. Can you share your opinion and experience about dependency injection containers? As far as I understand, they are now very popular for establishing connections between classes with different functionality. Where I can dive deep into this theme?<br/>
 3. I think it will be my next step to pass your PHP Architect course. I have seen one which is already planned, but it has uncomfortable time for me. Do you know about other groups in November or December?<br/>

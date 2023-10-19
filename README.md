@@ -54,3 +54,5 @@ Added new method labPDO1 in /app/Http/Controllers/EducationController.php with a
 Added new method labPDO2 in /app/Http/Controllers/EducationController.php with a working solution.
 <h2>Lab: Transaction</h2>
 Added new method labPDO3 in /app/Http/Controllers/EducationController.php with a working solution.
+<h2>DI containers</h2>
+I got the main idea and used it in pure PHP code. However, I faced some troubles, when I tried to use ServiceProviders in Laravel. I will solve it by the next class.

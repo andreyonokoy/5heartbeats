@@ -1,21 +1,15 @@
 <?php
 
 namespace App\Traits;
-
-use App\Models\Combat;
-use App\Models\CombatLog as Log;
+use App\Service\CombatLogService;
+use App\Providers\CombatLogServiceProvider;
 
 trait CombatLog
 {
     protected int $combatId=1;
     protected function setLogEntry($text)
     {
-        Log::create(
-            [
-                'text'=>$text,
-                'combat_id'=>$this->combatId
-            ]);
-        echo $text."<br/>";
+        CombatLogServiceProvider::instance()->setLog($text);
     }
 
 }

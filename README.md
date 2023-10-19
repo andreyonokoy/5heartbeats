@@ -48,7 +48,9 @@ We may execute http://127.0.0.1:8000/education/labInterfaces/ and see how my app
 Special CombatLog trait was added to Characters, Skills, SkillEffects and SkillConditions classes. It means that all such object may write some data for CombatLog.<br/>
 But basically, I want to separate CombatLogs by Combat Model, because it should contain logs from concrete actions inside one combat. how I should set Combat object or Combant_id value in this trait?
 
-<h2>Additional questions/h2>
-1. Can you recommend a good Laravel online training?<br/>
-2. Can you share your opinion and experience about dependency injection containers? As far as I understand, they are now very popular for establishing connections between classes with different functionality. Where I can dive deep into this theme?<br/>
-3. I think it will be my next step to pass your PHP Architect course. I have seen one which is already planned, but it has uncomfortable time for me. Do you know about other groups in November or December?<br/>
+<h2>Lab: Prepared Statements</h2>
+Added new method labPDO1 in /app/Http/Controllers/EducationController.php with a working solution.
+<h2>Lab: Stored Procedure</h2>
+Added new method labPDO2 in /app/Http/Controllers/EducationController.php with a working solution.
+<h2>Lab: Transaction</h2>
+Added new method labPDO3 in /app/Http/Controllers/EducationController.php with a working solution.

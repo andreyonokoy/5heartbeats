@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Models\CombatLog;
 use App\Models\Combat;
+use App\Service\CombatLogService;
 
 class CombatLogServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,7 @@ class CombatLogServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton(CombatLog::class);
+        $this->app->singleton(CombatLogService::class);
     }
 
     /**

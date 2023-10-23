@@ -10,4 +10,5 @@ class CombatLog extends Model
     use HasFactory;
 
     protected $fillable = ['text','combat_id'];
+
 }

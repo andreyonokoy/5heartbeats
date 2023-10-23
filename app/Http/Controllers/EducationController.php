@@ -73,16 +73,16 @@ class EducationController extends Controller
     public function serviceProvider(Request $request)
     {
         $combat = Combat::create();
-        var_dump(app()->singleton(CombatLog::class));
 
-        //app()->instance(CombatLogService::class, $combat);
+        $combatLog = resolve(CombatLogService::class);
+        $combatLog->setCombat($combat);
 
         $superHero=Characters::find(1);
         $goblin=Characters::find(2);
-        $skillAttack = SkillsService::get(3);
+        $skillAttack = SkillsService::get(1);
         $executeSkill = new ExecuteSkill();
         $executeSkill($skillAttack,$superHero,$goblin);
-
+        dd($combatLog->getFullLog());
     }
 
     public function labPDO1(Request $request)

@@ -9,14 +9,7 @@ class CombatLogService
 {
     protected Combat $combat;
     protected array $logs;
-    public function __construct(
-        CombatLog $combat,
-    )
-    {
-        $this->combat=$combat;
-    }
-
-    public function saveLog(string $text)
+    public function setLog(string $text)
     {
         $this->logs[]=CombatLog::create(
             [
@@ -24,9 +17,20 @@ class CombatLogService
                 'combat_id'=>$this->combat->id
             ]);
     }
-    public function getLog()
+
+    public function setCombat(Combat $combat)
     {
-        return $this->logs;
+        $this->combat=$combat;
+    }
+
+    public function getFullLog():array
+    {
+        $result=[];
+       foreach($this->logs as $log)
+       {
+           $result[]=$log->text;
+       }
+       return $result;
     }
 
 

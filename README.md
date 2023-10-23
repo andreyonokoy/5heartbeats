@@ -56,3 +56,10 @@ Added new method labPDO2 in /app/Http/Controllers/EducationController.php with a
 Added new method labPDO3 in /app/Http/Controllers/EducationController.php with a working solution.
 <h2>DI containers</h2>
 I got the main idea and used it in pure PHP code. However, I faced some troubles, when I tried to use ServiceProviders in Laravel. I will solve it by the next class.
+<h2>Lab: Validate an Email Address</h2>
+I have Added my regular expression on special online platform https://regex101.com/r/mMj2YF/1 <br/>
+<h2>Dependency injection</h2>
+I have added a new service provider class app/Providers/CombatLogServiceProvider.php, which inits a singleton dependency class app/Service/CombatLogService.php.
+CombatLogService can save and get data from the CombatLog Model. Each class may have access to this functionality through app/Traits/CombatLog.php.<br/>
+In function serviceProvider in Http/Controllers/EducationController.php after new Combat creation, I set the Combat Model object to CombatLogService and after it, all classes may push any data to the CombatLog model.
+Working example may be checked via /education/serviceProvider/ link.<br/>
